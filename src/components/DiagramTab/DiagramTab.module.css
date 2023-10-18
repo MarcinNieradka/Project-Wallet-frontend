@@ -1,0 +1,42 @@
+@import '../../stylesheet/vars.css';
+
+.diagramContainer {
+  margin-inline: auto;
+}
+
+.diagramHeader {
+  font-family: Poppins;
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 0.75;
+  background-color: #E7EAF2;
+}
+
+/* .wrapper {
+  padding-top: 25px;
+} */
+
+@media screen and (min-width: 767px) {
+  .diagramContainer {
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+    padding-top: 32px;
+  }
+  .diagramContainer > * {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .diagramContainer {
+    margin-left: 37px;
+  }
+  /* .diagramContainer > *:last-child {
+    flex-basis: 60%;
+  }
+  .diagramContainer > *:first-child {
+    flex-basis: 40%;
+  } */
+
+}

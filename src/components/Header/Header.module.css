@@ -1,0 +1,145 @@
+@import '../../stylesheet/vars.css';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-light);
+  overflow: hidden;
+  width: 100vw;
+  z-index: 2;
+}
+
+.logoContainer {
+  display: flex;
+  padding: 15px 20px 15px 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  padding-right: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  line-height: 1.5rem;
+  font-family: 'Poppins';
+  font-weight: 700;
+}
+
+.logOutContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 13px 20px 25px 20px;
+}
+
+.name {
+  display: flex;
+  justify-content: end;
+  font-family: 'Circe';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2rem;
+  color: var(--color-logout-button);
+  padding-right: 8px;
+}
+
+.exit {
+  height: 28px;
+  display: flex;
+}
+
+.exit:hover .exitText {
+  transition: 150ms;
+  color: var(--color-brand-accent);
+}
+
+.exit:hover .exitLogo > *:not(:first-child) {
+  stroke: var(--color-brand-accent);
+}
+
+.exitLogo {
+  display: flex;
+  align-self: center;
+  stroke: var(--color-logout-button);
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+.exitText {
+  visibility: hidden;
+  display: inline-block;
+  font-family: 'Circe';
+  font-weight: 400;
+  font-size: 1px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    max-height: 80px;
+    border: 1px solid var(--color-logout-button);
+    z-index: 900;
+    padding-right: 40px;
+  }
+
+  .logoContainer {
+    display: flex;
+    padding: 20px 32px 20px 32px;
+  }
+
+  .logo {
+    padding-right: 20px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .logOutContainer {
+    padding: 25px 32px 25px 32px;
+    max-width: 161px;
+  }
+
+  .name {
+    border-right: 1px solid var(--color-logout-button);
+    padding-right: 12px;
+    min-height: 30px;
+    align-items: center;
+  }
+
+  .exitLogo {
+    padding-left: 12px;
+    padding-bottom: 8px;
+    padding-top: none;
+    width: 30px;
+    height: 30px;
+  }
+
+  .exitText {
+    visibility: visible;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 1.2rem;
+    color: var(--color-logout-button);
+    padding-left: 8px;
+    padding-bottom: 2px;
+  }
+}
+
+@media screen and (min-width: 1279px) {
+  .logoContainer {
+    padding: 20px 16px 20px 16px;
+  }
+
+  .logOutContainer {
+    padding: 25px 16px 25px 16px;
+  }
+}

@@ -1,0 +1,293 @@
+@import '../../stylesheet/vars.css';
+.test {
+  width: 100px;
+  height: 100px;
+  background-color: var(--background-primary);
+}
+
+.validateError {
+  color: var(--color-brand-accent);
+  position: absolute;
+  top: 40px;
+  width: 100vw;
+  font-size: 14px;
+}
+
+.validateErrorCategory {
+  top: 45px;
+}
+.label {
+  position: relative;
+  width: 100%;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: var(--background-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.closeButton {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form::-webkit-scrollbar {
+  display: none;
+}
+
+.formHeader {
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.switchBox {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--background-gray);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: Circe;
+}
+
+.incomeSelected {
+  color: var(--color-brand-secondary);
+}
+
+.expenseSelected {
+  color: var(--color-brand-accent);
+}
+
+.formInput {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-switch-main);
+  padding-inline: 1.25rem;
+  padding-block: 0.5rem;
+  font-size: 18px;
+  font-family: Circe;
+  font-weight: 400;
+  color: var(--font-color-dark);
+}
+.formInput::placeholder {
+  color: var(--background-gray);
+}
+.formInput:focus {
+  outline: none;
+}
+.formInputComment {
+  display: block;
+  position: relative;
+  font-weight: 400;
+  height: 5rem;
+
+  resize: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid var(--color-switch-main);
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch input:checked + .slider {
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 44px;
+  width: 44px;
+  left: -5px;
+  bottom: -5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:not(:checked) + .slider:before {
+  background-color: var(--color-brand-accent);
+  background-image: url(../../assets/icons/Minus.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+  box-shadow: 0px 6px 15px 0px #ff659680;
+  transform: translateX(26px); /* Move the slider to the right when checked */
+}
+
+.switch input:checked + .slider:before {
+  background-color: var(--color-brand-secondary);
+  background-image: url(../../assets/icons/Plus.svg);
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+  box-shadow: 0px 6px 15px 0px var(--shadow-progress-bar);
+  transform: translateX(0px); /* Move the slider to the right when checked */
+}
+
+.button {
+  width: 100%;
+  border: none;
+  border-radius: 1.25rem;
+  height: 50px;
+  font-size: 18px;
+  font-family: Circe;
+  font-weight: 400;
+  letter-spacing: 3px;
+  transition: 0.4s ease;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+}
+
+.buttonAdd {
+  background-color: var(--color-brand-secondary);
+  color: var(--background-light);
+  border: 1px solid var(--color-brand-secondary);
+}
+.buttonAdd:hover,
+.buttonAdd:focus {
+  background-color: var(--background-light);
+  color: var(--color-brand-secondary);
+  -webkit-box-shadow: 8px 8px 24px -18px rgba(36, 204, 167, 1),
+    inset 0px 10px 24px -18px rgba(36, 204, 167, 1);
+  -moz-box-shadow: 8px 8px 24px -18px rgba(36, 204, 167, 1),
+    inset 0px 10px 24px -18px rgba(36, 204, 167, 1);
+  box-shadow: 8px 8px 24px -18px rgba(36, 204, 167, 1),
+    inset 0px 10px 24px -18px rgba(36, 204, 167, 1);
+}
+
+.buttonCancel {
+  margin-top: -20px;
+  background-color: var(--background-light);
+  border: 1px solid var(--color-brand-primary);
+  color: var(--color-brand-primary);
+}
+
+.buttonCancel:hover,
+.buttonCancel:focus {
+  background-color: var(--color-brand-primary);
+  color: var(--background-light);
+  -webkit-box-shadow: 8px 8px 24px -10px rgba(74, 86, 226, 1);
+  -moz-box-shadow: 8px 8px 24px -10px rgba(74, 86, 226, 1);
+  box-shadow: 8px 8px 24px -10px rgba(74, 86, 226, 1);
+}
+
+.formOption {
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.formSelect {
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.formOption:hover {
+  cursor: pointer;
+}
+.valueAndDateContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+select {
+  background-color: transparent;
+  --webkit-appearance: none;
+}
+@media screen and (min-width: 768px) {
+  .backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-overlay-modal);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+  }
+
+  .modal {
+    position: relative;
+    height: auto;
+    width: 540px;
+    border-radius: 20px;
+  }
+  .form {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .valueAndDateContainer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    flex-direction: row-reverse;
+  }
+  .closeButton {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    background-image: url('../../assets/icons/close.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .closeButton:hover {
+    cursor: pointer;
+  }
+}

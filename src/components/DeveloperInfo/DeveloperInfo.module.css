@@ -1,0 +1,21 @@
+.footer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  align-items: center;
+  font-size: 1rem;
+  z-index: 5;
+}
+
+.footer p {
+  margin-top: -4px;
+}
+
+@media screen and (min-width: 1279px) {
+  .footer {
+    display: flex;
+  }
+}
